@@ -5,7 +5,12 @@
   "repository": "https://github.com/caylazabel/learning-react.git",
   "author": "caylazabel <caylazabel@gmail.com>",
   "license": "MIT",
-  
+  "scripts": {
+    "lint": "standard"
+
+  },
+
+
   "dependencies": {
    "axios": "0.15.2",
    "express": "4.14.0",
