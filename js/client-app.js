@@ -1,11 +1,13 @@
-var div = React.DOM.div;
-var h1 = React.DOM.h1;
+/* global React ReactDOM */
+
+var div = React.DOM.div
+var h1 = React.DOM.h1
 
 var MyTitle = React.createClass({
   render () {
     return (
       div(null,
-        h1(null, this.props.title)
+        h1({style: {color: this.props.color}}, this.props.title)
       )
     )
   }
@@ -15,15 +17,15 @@ var MyTitleFactory = React.createFactory(MyTitle)
 
 var MyFirstComponent = React.createClass({
   render: function () {
-    return(
+    return (
       div(null,
-        MyTitleFactory ({ title: 'props are the best' }),
-        MyTitleFactory ({ title: 'semicolons are cool' }),
-        MyTitleFactory ({ title: 'Hey whats  up' }),
-        MyTitleFactory ({ title: 'its sunny outside' })
+        MyTitleFactory({ title: 'props are the best', color: 'lightBlue' }),
+        MyTitleFactory({ title: 'semicolons are cool', color: 'pink' }),
+        MyTitleFactory({ title: 'Hey whats  up', color: 'yellow' }),
+        MyTitleFactory({ title: 'its sunny outside', color: 'green' })
       )
     )
   }
 })
 
-ReactDOM.render(React.createElement(MyFirstComponent), document.getElementById('app'));
+ReactDOM.render(React.createElement(MyFirstComponent), document.getElementById('app'))
