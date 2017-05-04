@@ -6,7 +6,8 @@
   "author": "caylazabel <caylazabel@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "lint": "standard"
+    "lint": "standard",
+    "build": "webpack"
   },
   "dependencies": {
     "axios": "0.15.2",
