@@ -11062,8 +11062,6 @@ module.exports = setTextContent;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 
-var div = __WEBPACK_IMPORTED_MODULE_0_react___default.a.DOM.div;
-var h1 = __WEBPACK_IMPORTED_MODULE_0_react___default.a.DOM.h1;
 
 var MyTitle = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
   displayName: 'MyTitle',
@@ -21702,15 +21700,17 @@ module.exports = ReactMount.renderSubtreeIntoContainer;
 
 
 
-var div = __WEBPACK_IMPORTED_MODULE_0_react___default.a.DOM.div;
-
-var MyTitleFactory = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createFactory(__WEBPACK_IMPORTED_MODULE_2__MyTitle__["a" /* default */]);
-
 var MyFirstComponent = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
   displayName: 'MyFirstComponent',
 
   render: function render() {
-    return div(null, MyTitleFactory({ title: 'props are the best', color: 'lightBlue' }), MyTitleFactory({ title: 'semicolons are cool', color: 'pink' }), MyTitleFactory({ title: 'Hey whats  up', color: 'yellow' }), MyTitleFactory({ title: 'its sunny outside', color: 'green' }));
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__MyTitle__["a" /* default */], { title: 'props are cool', color: 'lightPink' }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__MyTitle__["a" /* default */], { title: 'this is dope', color: 'lightBlue' }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__MyTitle__["a" /* default */], { title: 'its so sunny outside', color: 'lightYellow' })
+    );
   }
 });
 

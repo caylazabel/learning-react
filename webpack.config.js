@@ -14,13 +14,26 @@ module.exports = {
   stats: {
     colors: true,
     reasons: true,
-    chunks: false
+    chunks: true
   },
   module: {
     rules: [
       {
+        include: path.resolve(__dirname, 'js'),
         test: /\.js$/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        user: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          }
+        ]
       }
     ]
   }
