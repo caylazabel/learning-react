@@ -11068,7 +11068,16 @@ var h1 = __WEBPACK_IMPORTED_MODULE_0_react___default.a.DOM.h1;
 var MyTitle = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
   displayName: 'MyTitle',
   render: function render() {
-    return div(null, h1({ style: { color: this.props.color } }, this.props.title));
+    var style = { color: this.props.color };
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'div',
+      null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        { style: style },
+        this.props.title
+      )
+    );
   }
 });
 
