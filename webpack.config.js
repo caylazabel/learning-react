@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   context: __dirname,
   entry: './js/ClientApp.js',
-  devtool: 'source-map',
+  devtool: 'eval',
   output: {
     path: path.join(__dirname, '/public'),
     filename: 'bundle.js'
@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        user: [
+        use: [
           'style-loader',
           {
             loader: 'css-loader',
