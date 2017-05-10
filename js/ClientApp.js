@@ -13,8 +13,8 @@ const App = React.createClass({
           <a>or Browse All</a>
         </div>
       </div>
-    );
+    )
   }
-});
+})
 
-render(<App />, document.getElementById('app'));
+render(<App />, document.getElementById('app'))
