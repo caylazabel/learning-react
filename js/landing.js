@@ -7,7 +7,7 @@ const Landing = React.createClass({
       <div className='landing'>
         <h1>svideo</h1>
         <input type='text' placeholder='search' />
-        <Link>or Browse All</Link>
+        <Link to='/search'>or Browse All</Link>
       </div>
     )
   }
