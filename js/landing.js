@@ -12,7 +12,7 @@ const Landing = React.createClass({
       </div>
     )
   }
-});
+})
 
 const mapStateToProps = (state) => {
   return {
