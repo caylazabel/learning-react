@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router'
 
 const Landing = React.createClass({
@@ -13,4 +14,9 @@ const Landing = React.createClass({
   }
 })
 
-export default Landing
+const mapStateToProps = (state) => {
+  return {
+    searchTerm: state.searchTerm
+  }
+}
+export default connect(mapStateToProps)(Landing)
