@@ -26,9 +26,9 @@ const App = React.createClass({
               component={(props) => {
                 const shows = preload.shows.filter((show) => props.params.id === show.imdbID)
                 return <Details show={shows[0]} {...props} />
-            }}
+              }}
           />
-        </div>
+          </div>
         </Provider>
       </BrowserRouter>
     )
