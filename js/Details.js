@@ -26,6 +26,7 @@ const Details = React.createClass({
     })
     .catch((error) => console.error('axios error', error))
   },
+
   render () {
     const { title, description, year, poster, trailer } = this.props.show
     let rating
