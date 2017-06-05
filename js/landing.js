@@ -17,6 +17,7 @@ const Landing = React.createClass({
   },
   handleSearchSubmit (event) {
     event.preventDefault()
+    this.context.router.transitionTo('search')
   },
   render () {
     return (
