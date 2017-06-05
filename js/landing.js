@@ -17,14 +17,15 @@ const Landing = React.createClass({
   },
   handleSearchSubmit (event) {
     event.preventDefault()
-    this.context.router.transitionTo('search')
+    this.context.router.transitionTo('/search')
   },
   render () {
     return (
       <div className='landing'>
         <h1>svideo</h1>
         <form onSubmit={this.handleSearchSubmit}>
-        <input onChange={this.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='Search' />
+          <input onChange={this.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='Search' />
+        </form>
         <Link to='/search'>or Browse All</Link>
       </div>
     )

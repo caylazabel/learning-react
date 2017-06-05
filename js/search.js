@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import ShowCard from './ShowCard'
 import Header from './Header'
 const { arrayOf, shape, string } = React.PropTypes
@@ -8,7 +9,8 @@ const Search = React.createClass({
     shows: arrayOf(shape({
       title: string,
       description: string
-    }))
+    })),
+    searchTerm: string
   },
   getInitialState () {
     return {
