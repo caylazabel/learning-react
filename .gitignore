@@ -4,7 +4,7 @@
 
 #ignore data files
 data/
-
+///
 ### Node ###
 # Logs
 logs
