@@ -1,7 +1,9 @@
 import React from 'react'
 import axios from 'axios'
+import { connect } from 'react-redux'
+import { getOMDBDetails } from './actionCreators'
 import Header from './Header'
-const { shape, string } = React.PropTypes
+const { shape, string, func } = React.PropTypes
 
 const Details = React.createClass({
   propTypes: {
@@ -12,7 +14,15 @@ const Details = React.createClass({
       trailer: string,
       description: string,
       imdbID: string
-    })
+    }),
+    omdbData: shape({
+      imdbID: string
+    }),
+    componentDidMount () {
+      if (!this.props.omdbData.imdbRating) {
+        this.props.dispatch(getOMDBDetails(this.props.show.imdbID))
+      }
+    }
   },
   getInitialState () {
     return {
@@ -30,8 +40,8 @@ const Details = React.createClass({
   render () {
     const { title, description, year, poster, trailer } = this.props.show
     let rating
-    if (this.state.omdbData.imdbRating) {
-      rating = <h3>{this.state.omdbData.imdbRating}</h3>
+    if (this.props.omdbData.imdbRating) {
+      rating = <h3>{this.props.omdbData.imdbRating}</h3>
     } else {
       rating = <img src='/public/img/loading.png' alt='loading indicator' />
     }
@@ -52,5 +62,13 @@ const Details = React.createClass({
     )
   }
 })
+
+const mapStateToProps = (state, ownProps) => {
+  const omdbData = state.omdbData[ownProps.show.imdb] ? state.omdbData[ownProps.show.imdb] : {}
+
+  return {
+    omdbData
+  }
+}
 
 export default Details
