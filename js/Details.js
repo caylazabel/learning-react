@@ -70,5 +70,6 @@ const mapStateToProps = (state, ownProps) => {
     omdbData
   }
 }
+}
 
 export default Details
