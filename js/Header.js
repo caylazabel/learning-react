@@ -15,7 +15,7 @@ class Header extends React.Component {
   render () {
     let utilSpace
     if (this.props.showSearch) {
-      utilSpace = <input onChange={this.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='Search' />
+      utilSpace = <input onChange={this.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='SEarch' />
     } else {
       utilSpace = (
         <h2>
