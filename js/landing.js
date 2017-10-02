@@ -29,7 +29,6 @@ const Landing = React.createClass({
         <Link to='/search'>or Browse Alllllk</Link>
       </div>
      )
-lllß
 
 const mapStateToProps = (state) => {
   return {
